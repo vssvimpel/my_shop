@@ -10,7 +10,6 @@ if(isset($_POST["login"])){
         if ($user == false) {
             header("Location: ../controllers/admin_aut.php?error=1");
         } else {
-            $user_pass = ($_POST['pass']);
             $hash = password_verify($user_pass, $user->pass);
             // var_dump($hash);die;
             if ($hash == false) {

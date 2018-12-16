@@ -1,0 +1,243 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.new_collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 700px;
+}
+.new_collection_text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* h1 {
+    
+} */
+h3 {
+    font-style: italic;
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+.new_collection_text a {
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px;
+    border: solid 1px gray;
+    
+    font-size: 15px;
+    color: black;
+}
+.navigation_info {
+    display: flex;
+    justify-content: center;
+}
+.navigation_info_blocks {
+    width: 25%;
+    display: block;
+}
+.info_block_woman {
+    background: url(../images/main/1.jpg) 0 / cover no-repeat;
+    height: 438px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.info_block_woman a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+
+}
+.info_block_belt {
+    background: url(../images/main/5.jpg) 77% / cover no-repeat;
+    height: 219px;
+}
+.info_block_lightgray {
+    background: lightgray;
+    height: 33.33%;
+    box-sizing: border-box;
+    padding-top: 40px;
+    text-align: center;
+    justify-content: center;
+}
+.text p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: 15px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.image {
+    background: url(../images/main/icons/warning.svg) 0 / cover no-repeat;
+    height: 40px;
+    max-width: 40px;
+    margin: auto;
+    position: relative;
+}
+.image::before  {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 33px;
+    background-color: white;
+    margin: auto;
+    bottom: 20px;
+    left: -50px;
+}
+.image::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 33px;
+    background-color: white;
+    margin: auto;
+    bottom: 20px;
+    right: -50px;
+}
+.info_block_jeans {
+    background: url(../images/main/2.jpg) 0 / cover no-repeat;
+    height: 33.33%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.info_block_jeans a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+.info_block_gray {
+    background: lightslategray;
+    height: 33.33%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.info_block_gray a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    position: absolute;
+    text-align: center;
+    line-height: 1.5;
+}
+.info_block_gray img {
+    height: 40px;
+    margin-top: -90px;
+    margin-left: 10px;
+    position: relative;
+}
+.info_block_shoes {
+    background: url(../images/main/3.jpg) 0 / cover no-repeat;
+    height: 33.33%;
+}
+.info_block_sport {
+    background: url(../images/main/6.jpg) 0/ cover no-repeat;
+    height: 33.33%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 2;
+    position: relative;
+}
+.info_block_sport::after {
+    content: '';
+    background: black;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+.info_block_sport a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 3;
+}
+.info_block_children {
+    background: url(../images/main/31735710342_86e5b0c63f_b.jpg) 0 / cover no-repeat;
+    height: 439px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.info_block_children a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+.loyality {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.loyality_form {
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.loyality_form h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+.loyality_form p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: 15px;
+    color: gray;
+    box-sizing: border-box;
+    padding-bottom: 60px;
+    padding-top: 15px;
+}
+input {
+    border: 1px solid black;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+[type="submit"] {
+    background: orange;
+    outline: none;
+    color: white;
+
+}
+/* подумать как выводить предупреждение.
+.loyality_form_warning {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ */
+.orders {
+    text-align: center;
+    margin-bottom: 35px;
+}

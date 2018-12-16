@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700&subset=cyrillic,cyrillic-ext');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@mixin adapt($screen) {
+    @if $screen == small {
+        @media (max-width: 720px) {@content};
+    } @else if $screen == medium {
+        @media (min-width: 720px) and (max-width: 849px) {@content};
+    } @else if $screen == large {
+        @media (min-width: 850px) and (max-width: 1000px) {@content};
+    }
+}
+.wrapper {
+    max-width: 1500px;
+    background-color: rgb(229, 229, 229);
+    margin: 0 auto;
+    .wrapper-work {
+        max-width: 1240px;
+        background-color: rgb(255, 255, 255);
+        margin: 0 auto;
+        .wrapper-work-product {
+            max-width: 1180px;
+            background-color: rgb(250, 250, 250);
+            margin: 0 auto;
+            .wrapper-work-product-wrapper {
+                width: 95%;
+                margin: 0 auto;
+                background-color: rgb(250, 250, 250);
+
+                .wrapper-work-product-wrapper-product{
+                    background-image: url(../images/catalog/9.jpg);
+                    width: 60%;
+                    height: 450px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin: 0 auto;
+                    @include adapt (large) {
+                        width: 72%;
+                    }
+                    @include adapt (medium) {
+                        width: 76%;
+                        height: 400px;
+                    }
+                    @include adapt (small) {
+                        width: 76%;
+                        height: 400px;
+                    }
+                    @media(max-width:705px){
+                        width: 91%;
+                        height: 400px;
+                    }
+                    @media(max-width:590px){
+                        width: 88%;
+                        height: 320px;
+                    }
+                    @media(max-width:500px){
+                        width: 300px;
+                        height: 231px;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+.product_description {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 602px;
+    margin-top: 50px;
+    .product_description-vendor_code {
+        color: rgb(122, 122, 122);
+        font-size: 14pt;
+    }
+    .product_description-price {
+        font-size: 16pt;
+        font-style: italic;
+        margin: 0 0 30px 0;
+    }
+    .product_description-description {
+        margin: 0 0 30px 0;
+        @media(max-width:500px){
+            padding: 0 10px;
+        }
+    }
+    .product_description-product_size {
+        color: rgb(122, 122, 122);
+        line-height: 3;
+    }   .product_description-product_size-size_number {
+        display: flex;
+        justify-content: space-between;
+        max-width: 200px;
+        margin: 0 auto;
+        button {
+            height: 30px;
+            width: 30px;
+            border: 2px rgb(122, 122, 122) solid;
+            line-height: 1.7em;
+            background-color: white;
+            outline: none;
+            &:hover {
+                border: 3px rgb(122, 122, 122) solid;
+                background-color: rgb(190, 190, 190);
+                line-height: 2em;
+            }
+        }
+    }
+    .product_description-btn {
+        height: 50px;
+        width: 250px;
+        background-color: rgb(255, 153, 0);
+        line-height: 3.45em;
+        color: white;
+        margin: 0 auto;
+        margin-top: 50px;
+        &:hover {
+            background-color: rgb(252, 166, 36);
+        }
+    }
+}

@@ -17,14 +17,16 @@
             } ?>
             </select>
             <select name="size" id="size">
-                <option>Размер</option>
+               <?php echo '<option>Все размеры</option>'?>;
+               <?php foreach ($sizes as $size) {
+                   echo '<option value="'.$size->id.'">'.$size->value.'</option>';
+               }?>
             </select>
             <select name="cost" id="cost">
-                <option>Стоимость</option>
-                <option>0-1000</option>
-                <option>1000-3000</option>
-                <option>3000-6000</option>
-                <option>6000-20000</option>
+                <option value="">Выберите стоимость</option>
+                <?php foreach ($products as $product) { 
+                    echo '<option value="'.$product->price.'">'.$product->price.'</option>';
+                }?>;
             </select>
         </div>
         <div class="all_products">

@@ -38,6 +38,6 @@
 <script src="../lib/popper.min.js"> </script>        
 <script src="../lib/bootstrap.min.js"> </script>
 <script src="../js/drop.js"></script> 
-<script src="../js/change_category.js"></script>    
+<script src="../js/change_category.js"></script>  
 </body>
 </html>

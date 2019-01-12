@@ -2,32 +2,44 @@
 session_start();
 require_once '../models/Product.php';
 require_once '../models/Category.php';
-
 require_once '../models/Collection.php';
+require_once '../models/Size.php';
 
 if (isset($_GET['category_id'])){
     $category_id = $_GET['category_id']; 
-    $category  = new Category($category_id);
+    $category = new Category($category_id);
     $category_title = $category->title;
+    $page_title =  $category->title . '-' . $category->title  ;
 } else {
     $category_id = false;
     $category_title = 'Все товары';
 }
-
 if (isset($_GET['collection_id'])){
     $collection_id = $_GET['collection_id']; 
     $collection  = new Collection($collection_id);
     $collection_title = $collection->title;
-    $page_title =  $collection->title . '-' . $category->title  ;
-
+    $page_title =  $collection->title;
 } else {
     $collection_id = false;
     $collection_title = 'Каталог';
     $page_title = 'Все товары';
 }
+if (isset($_GET['size_id'])){
+    $size_id = $_GET['size_id'];
+    $size = new Size($size_id);
+    $size_value = $size->value;
+}
+// if (isset($_GET['price'])){
+//     $price = $_GET['price'];
+//     $price = new Product($price);
+//     $price = $product->price;
+// }
+
+// var_dump($value);
 
 
 
+$sizes = Size::getAll();
 $products = Product::getAll($collection_id, $category_id);
 $categories = Category::getAll();
 require_once '../views/catalog.php';
